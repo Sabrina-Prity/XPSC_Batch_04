@@ -8,7 +8,7 @@ int main()
 
     int n, q;
     cin >> n >> q;
-    vector<int> a(n), b(q);
+    vector<int> a(n);
     for (int i = 0; i < n; i++)
     {
         cin >> a[i];
@@ -19,23 +19,22 @@ int main()
         int key;
         cin >> key;
 
-        int l = 0, r = n - 1, mid, ans = -1;
+        int l = 0, r = n - 1, mid, ans = n;
         while (l <= r)
         {
             mid = (l + r) / 2;
 
-            if (key >= a[mid])
+            if (key <= a[mid])
             {
                 ans = mid;
-                l = mid + 1;
+                r = mid - 1;
             }
             else
             {
-                r = mid - 1;
+                l = mid + 1;
             }
-            
         }
-        cout << ans+1 << '\n';
+        cout << ans + 1 << '\n';
     }
 
     return 0;
