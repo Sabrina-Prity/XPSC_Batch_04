@@ -22,7 +22,6 @@ int main()
         // cout << s << endl;
         string s2 = "meow";
         (s == s2) ? cout << "YES" << '\n' : cout << "NO" << '\n';
-        // cout << s << " " << s1 << " " << s2 << endl;
     }
 
     return 0;
