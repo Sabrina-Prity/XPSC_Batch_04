@@ -18,14 +18,14 @@ int main(){
     auto ok = [&](long long mid)
     {
         long long cnt = 0;
-        for(int i=n/2; i<n; i++)
+        for(int i=(n/2); i<n; i++)
         {
             cnt += (a[i] < mid ? (mid - a[i]) : 0);
         }
         return cnt <= k;
     };
 
-    long long l=1, r=2e5, mid, ans;
+    long long l=1, r=2e9, mid, ans=0;
     while(l<=r)
     {
         mid = l + (r-l) / 2;
