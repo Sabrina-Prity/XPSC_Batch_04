@@ -13,7 +13,7 @@ int main()
     {
         int n;
         cin >> n;
-        vector<int> a(n+1);
+        vector<int> a(n);
         for(int i=0; i<n; i++)
         {
             cin >> a[i];
@@ -37,14 +37,14 @@ int main()
         }
         else
         {
-            for(int k=j; k<n; k++)
-            {
-                cout << a[k] << " ";
-            }
-            for(int k=0; k<=i; k++)
-            {
-                cout << a[k] << " ";
-            }
+            for (int k = j; k < n; k++)
+        {
+            cout << a[k] << " ";
+        }
+        for (int k = 0; k <= i; k++)
+        {
+            cout << a[k] << " ";
+        }
             cout << '\n';
         }
     }
